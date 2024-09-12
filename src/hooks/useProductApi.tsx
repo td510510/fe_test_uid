@@ -13,7 +13,7 @@ const useProductApi = () => {
     dispatch(fetchProducts());
   }, [dispatch]);
 
-  const addProduct = useCallback(async (product) => {
+  const addProduct = useCallback(async (product: any) => {
     dispatch(createProduct(product));
   }, [dispatch]);
 
