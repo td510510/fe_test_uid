@@ -1,0 +1,36 @@
+@use '../../styles//typography' as *;
+
+.container {
+  --padding: 20px;
+  max-width: calc(1170px + var(--padding) * 2);
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  margin-bottom: 50px;
+  .menu {
+    display: flex;
+    justify-content: center;
+    li {
+      margin-right: min(calc(42 / 1440 * 100vw), 42px);
+      @include p2Web;
+      color: var(--text-color-2);
+      position: relative;
+      cursor: pointer;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary-color-1);
+      }
+      &:hover {
+        color: var(--primary-color-1);
+        &::after {
+          width: 15px;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+}

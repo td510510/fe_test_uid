@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  table {
+    border-collapse: collapse;
+    width: 768px;
+    margin-top: 30px;
+    th,
+    tr,
+    td {
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+  }
+  button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .tags {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
